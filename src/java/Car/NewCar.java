@@ -10,12 +10,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 /**
  *
  * @author Tijan
  */
 @Entity
+@NamedQuery(name = "findNewCars", query = "SELECT n FROM newcar n")
 public class NewCar extends Car implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -26,13 +28,7 @@ public class NewCar extends Car implements Serializable {
     private String rsap;
     private String stockCars;
 
-    public NewCar(Long id, String warranty, String extWarranty, String rsap, String stockCars) {
-        this.id = id;
-        this.warranty = warranty;
-        this.extWarranty = extWarranty;
-        this.rsap = rsap;
-        this.stockCars = stockCars;
-    }
+    public NewCar() {}
 
     public NewCar(Long id, String warranty, String extWarranty, String rsap, String stockCars, Long mainCarID, Long price, String refNum, String make, String model, String type, String color, String transmission, String engine, String fuel, int doors, int seats) {
         super(mainCarID, price, refNum, make, model, type, color, transmission, engine, fuel, doors, seats);

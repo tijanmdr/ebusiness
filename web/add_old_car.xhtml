@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Add Old Car</title>
+    </h:head>
+    <h:body>
+        <h1>Add Old Car</h1>
+        <hr />
+        <h:form>
+            <h:panelGrid columns="2" >
+                <h:outputLabel value="Reference Number: "/>
+                <h:inputText value="#{CarController.oldCar.refNo}"/>
+                
+                <h:outputLabel value="Make: "/>
+                <h:inputText value="#{CarController.oldCar.make}"/>
+
+                <h:outputLabel value="Model:"/>
+                <h:inputText value="#{CarController.oldCar.model}"/>
+
+                <h:outputLabel value="Drive Type : "/>
+                <h:inputText value="#{CarController.oldCar.type}"/>
+
+                <h:outputLabel value="Colour  : "/>
+                <h:inputText value="#{CarController.oldCar.color}" />
+                
+                <h:outputLabel value="Transmission : "/>
+                <h:inputText value="#{CarController.oldCar.transmission}"/>
+
+                <h:outputLabel value="Engine :"/>
+                <h:inputText value="#{CarController.oldCar.engine}"/>
+
+                <h:outputLabel value="Fuel Type : "/>
+                <h:inputText value="#{CarController.oldCar.fuel}"/>
+
+                <h:outputLabel value="Doors  : "/>
+                <h:inputText value="#{CarController.oldCar.doors}" />
+                
+                <h:outputLabel value="Seats : "/>
+                <h:inputText value="#{CarController.oldCar.seats}" />
+                
+                <h:outputLabel value="Price : "/>
+                <h:inputText value="#{CarController.oldCar.price}" />
+                
+                <h:outputLabel value="Odometer : "/>
+                <h:inputText value="#{CarController.oldCar.odometer}" />
+                
+                <h:outputLabel value="Rego Number : "/>
+                <h:inputText value="#{CarController.oldCar.regoNum}" />
+                
+                <h:outputLabel value="Rego Expiry : "/>
+                <h:inputText value="#{CarController.oldCar.regoExp}" />
+                
+                <h:outputLabel value="Service History : "/>
+                <h:inputText value="#{CarController.oldCar.serviceHistory}" />
+                
+                <h:outputLabel value="Vehicle ID : "/>
+                <h:inputText value="#{CarController.oldCar.vehicleID}" />
+                
+                <h:outputLabel value="Car History : "/>
+                <h:inputText value="#{CarController.oldCar.carHistory}" />
+
+            </h:panelGrid>
+            <h:commandButton value="Create" action="#{CarController.createOldCar}" />
+            
+         </h:form>
+     </h:body>
+</html>
+

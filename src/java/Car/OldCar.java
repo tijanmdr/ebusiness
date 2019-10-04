@@ -6,17 +6,18 @@
 package Car;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 /**
  *
  * @author Tijan
  */
 @Entity
+@NamedQuery(name = "findOldCars", query = "SELECT o from oldcar o")
 public class OldCar extends Car implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -29,14 +30,8 @@ public class OldCar extends Car implements Serializable {
     private String vehicleID;
     private String carHistory;
 
-    public OldCar(Long id, Long odometer, int regoNum, String regoExp, String serviceHistory, String vehicleID, String carHistory) {
-        this.id = id;
-        this.odometer = odometer;
-        this.regoNum = regoNum;
-        this.regoExp = regoExp;
-        this.serviceHistory = serviceHistory;
-        this.vehicleID = vehicleID;
-        this.carHistory = carHistory;
+    public OldCar() {
+        super();
     }
     
     public OldCar(Long id, Long odometer, int regoNum, String regoExp, String serviceHistory, String vehicleID, String carHistory, Long mainCarID, Long price, String refNum, String make, String model, String type, String color, String transmission, String engine, String fuel, int doors, int seats) {
